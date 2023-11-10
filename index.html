@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <!--css file-->
+    <link rel="stylesheet" href="styles.css">
+    <!--font icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="section">
+        <div class="row">
+            <div class="col">
+                <div class="box">
+                    <div class="first box">
+                       <button class="undo" onclick="undo()">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                       </button>
+                       <button class="redo" onclick="redo()">
+                        <i class="fa-solid fa-rotate-right"></i>
+                       </button>
+                    </div>
+                    <div class="second box">
+                        <button type="button" onclick="bold()">
+                            <i class="fa-solid fa-bold"></i>
+        
+                        </button>
+                        <button type="button" onclick="italic()">
+                            <i class="fa-solid fa-italic"></i>
+        
+                        </button>
+                        <button type="button" onclick="underline()">
+                            <i class="fa-solid fa-underline"></i>
+        
+                        </button>
+                        <button type="button" onclick="strikethrough()">
+                            <i class="fa-solid fa-strikethrough"></i>
+        
+                        </button>
+
+                    </div>
+                    <div class="third box">
+                        <button type="button" onclick="justifyLeft()">
+                                <i class="fa-solid fa-align-left"></i>
+                        </button>
+                        <button type="button" onclick="justifyCenter(this)">
+                            <i class="fa-solid fa-align-center"></i>
+                        </button>
+                        <button type="button" onclick="justifyRight(this)">
+                        <i class="fa-solid fa-align-right"></i>
+                        </button>
+                    </div>
+                    <div class="fourth box">
+                        <select  type="number"  id="fontSize" onchange="changeSize()">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                        </select>
+
+
+            
+
+
+                        <input type="color" id="mycolor" onchange="changeColor()">
+                    
+                    </div>
+                </div>
+            </div>
+            <br>
+        <div class="editor" id="textarea" contenteditable="true">
+        </div>
+        </div>
+    </div>
+    <!--JS file-->
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
